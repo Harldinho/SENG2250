@@ -1,0 +1,54 @@
+key (128 bits) = c334982848cf03465deb0ab68864af9a
+
+Plain Text (512 bits, split into 32 bit hex characters) = 4629f44bb74c0d3b6fd00d10a2e41238e762638f323c700d82b7920df6b928282ddc91c5e863e35979c6d3704feb26265c897b6d8a6aebe51bd3eb66ad2ea5f8
+PT1 = 4629f44bb74c0d3b6fd00d10a2e41238
+PT2 = e762638f323c700d82b7920df6b92828
+PT3 = 2ddc91c5e863e35979c6d3704feb2626
+PT4 = 5c897b6d8a6aebe51bd3eb66ad2ea5f8
+
+IV (128 bits, same as plain text block) =
+5e171f4e02ff435ecf099ebbce462b89
+
+
+Round 1:
+PT1 XOR IV =
+183eeb05b5b34e65a0d993ab6ca239b1 = T1
+
+T1 + KEY = 
+3bb6d6599a2ca63057b322a7d9352405 = CT1
+
+
+Round 2:
+CT1 XOR PT2 =
+dcd4b5d6a810d63dd504b0aa2f8c0c2d = T2
+
+T2 + KEY =
+ed08daafea8f92fc254c2b31a7bb4618 = CT2
+
+
+Round 3:
+CT2 XOR PT3 = 
+c0d44b6a02ec71a55c8af841e850603e = T3
+
+T3 + KEY =
+03466ad9402197a3322b30cca25ba372 = CT3
+
+
+Round 4:
+CT3 XOR PT4 = 
+5fcf11b4ca4b7c4629f8dbaa0f75068a = T4
+
+T4 + KEY =
+c6be8c6e00bb6ca84e1e4b4a8932c1ba = CT4
+
+
+Entire Cipher Text (CT1 + CT2 + CT3 + CT4):
+3bb6d6599a2ca63057b322a7d9352405 ed08daafea8f92fc254c2b31a7bb4618 03466ad9402197a3322b30cca25ba372 c6be8c6e00bb6ca84e1e4b4a8932c1ba
+
+
+
+
+
+
+
+
